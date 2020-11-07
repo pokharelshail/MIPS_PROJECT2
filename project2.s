@@ -59,5 +59,10 @@ Loop: #Exit loop if value of counter is 4 and  counter++;
 	lb $t0, ($s6)				
 	# if there is an end line, space or null character then continue the loop
 	beq $t0, 10, Loop  		
-	beq $t0, 32, Space		
+	beq $t0, 32, Space	
+	li $a3, 1			
+				
+	slti $t2, $t0, 58       	  		#Valid digit check
+	li $t3, 47
+	slt $t3, $t3, $t0                      	
 
