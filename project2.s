@@ -51,5 +51,10 @@ Null:
 	li $t4, 1			# this register holds the exponent of 28. 
 	li $t7, 0			# loop counter if it equals 3 the loop exits. 
 	la $s6, four+4		#  start at the end of the string
+.globl main
+Loop: #Exit loop if value of counter is 4 and  counter++;
+	beq $t7, 4, print			
+	addi $t7, $t7, 1 			
+	addi $s6, $s6, -1			
 
 
