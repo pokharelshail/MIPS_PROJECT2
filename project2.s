@@ -14,3 +14,8 @@ main:
 	la $a1, message
 	li $t9, 0
 .global main
+
+First:
+	lb $a0,($a1)
+	addi $a1, $a1, 1  # increment  the pointer by 1
+
