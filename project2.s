@@ -104,3 +104,7 @@ print:  #print sum of all conveted values
 	add $a0, $zero, $s5 
 	syscall
 	j exit	
+
+invalidError:			
+	li $v0, 4	
+	la $a0, invalid
