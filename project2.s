@@ -81,5 +81,10 @@ Loop: #Exit loop if value of counter is 4 and  counter++;
 	slt $t3, $t3, $t0
 	and $t3, $t3, $t2  			
 	addi $t9, $t0, -87
-	bne $t3, 1, invalidError               	
+	bne $t3, 1, invalidError
+.globl main
+convert:
+	move $a0, $t9
+	move $a2, $t4
+	jal converter               	
 
