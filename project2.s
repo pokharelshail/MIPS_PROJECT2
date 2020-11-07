@@ -91,5 +91,10 @@ convert:
 	mul $t4, $t4, 28
 	j Loop
 	converter:
-		mul $v0, $a0, $a2              	
+		mul $v0, $a0, $a2
+		jr $ra              	
 
+
+Space:			    #sees if the space is in between or at start and end
+	beq $a3, 1, invalidError		
+	j Loop		
