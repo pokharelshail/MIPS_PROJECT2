@@ -33,7 +33,12 @@ Start:
 	sb $a0, 0($s6)   
 
 	lb $a0, 0($a1) 			
-	sb $a0, 1($s6)                       
+	sb $a0, 1($s6) 
+
+	lb $a0, 1($a1) 			#storing the third non-space the and the fourth non-space character to  2+ and 3+ starting address of Four respectively
+	sb $a0, 2($s6)
+	lb $a0, 2($a1) 			
+	sb $a0, 3($s6)                      
 
 
 
