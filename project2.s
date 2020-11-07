@@ -27,5 +27,10 @@ Start:
 	beq $t9, 1, invalidError  #invalid error
 
 	li $t9, 1 #non space character is discovered
+	la $s6, four				#loading the adress of Four to s6 
+	
+	lb $a0, -1($a1)  
+	sb $a0, 0($s6)                          
+
 
 
