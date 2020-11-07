@@ -38,7 +38,12 @@ Start:
 	lb $a0, 1($a1) 			#storing the third non-space the and the fourth non-space character to  2+ and 3+ starting address of Four respectively
 	sb $a0, 2($s6)
 	lb $a0, 2($a1) 			
-	sb $a0, 3($s6)                      
+	sb $a0, 3($s6)    
+
+	addi $a1, $a1, 3      # Four charracters have been itterated through so add  3 to $a1  
+	j Start
+.global main
+Null:                 
 
 
 
