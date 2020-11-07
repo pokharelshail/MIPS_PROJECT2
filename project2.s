@@ -1,7 +1,9 @@
 .data
+
 	invalid: .asciiz "Invalid Input"
 	message: .space 1000
 	four: .space 4
+
 .text
 .global main
 main:
@@ -14,7 +16,6 @@ main:
 	la $a1, message
 	li $t9, 0
 .global main
-
 Start:
 	lb $a0,($a1)
 	addi $a1, $a1, 1  # increment  the pointer by 1
@@ -27,6 +28,7 @@ Start:
 	beq $t9, 1, invalidError  #invalid error
 
 	li $t9, 1 #non space character is discovered
+	
 	la $s6, four				#loading the adress of Four to s6 
 	
 	lb $a0, -1($a1)  
@@ -44,6 +46,6 @@ Start:
 	j Start
 .global main
 Null:                 
-
+	beq $t9, 0, invalidError  #if $t9=0 no space character found
 
 
