@@ -15,7 +15,10 @@ main:
 	li $t9, 0
 .global main
 
-First:
+Start:
 	lb $a0,($a1)
 	addi $a1, $a1, 1  # increment  the pointer by 1
+
+	beq $a0, 0, Null
+	beq $a0, 10, Null
 
