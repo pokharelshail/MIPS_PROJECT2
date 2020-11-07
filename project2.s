@@ -9,3 +9,4 @@ main:
 	li $v0,8
 	la $a0, reply
 	li $a1, 1000
+	syscall
