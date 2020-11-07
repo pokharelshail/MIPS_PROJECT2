@@ -56,5 +56,8 @@ Loop: #Exit loop if value of counter is 4 and  counter++;
 	beq $t7, 4, print			
 	addi $t7, $t7, 1 			
 	addi $s6, $s6, -1			
-
+	lb $t0, ($s6)				
+	# if there is an end line, space or null character then continue the loop
+	beq $t0, 10, Loop  		
+	beq $t0, 32, Space		
 
