@@ -67,5 +67,12 @@ Loop: #Exit loop if value of counter is 4 and  counter++;
 	slt $t3, $t3, $t0 
 	and $t3, $t3, $t2  			
 	addi $t9, $t0, -48			
-	beq $t3, 1, convert	                    	
+	beq $t3, 1, convert	  
+
+	slti $t2, $t0, 83		# Range from A to R. R =82. so 82 +1 must be used
+	li $t3, 64 				
+	slt $t3, $t3, $t0 			
+	and $t3, $t3, $t2  			
+	addi $t9, $t0, -55     
+	beq $t3, 1, convert	                  	
 
