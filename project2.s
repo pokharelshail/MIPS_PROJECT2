@@ -47,5 +47,9 @@ Start:
 .global main
 Null:                 
 	beq $t9, 0, invalidError  #if $t9=0 no space character found
+	li $s5, 0			# this register holds the final sum of the Base-28 number
+	li $t4, 1			# this register holds the exponent of 28. 
+	li $t7, 0			# loop counter if it equals 3 the loop exits. 
+	la $s6, four+4		#  start at the end of the string
 
 
