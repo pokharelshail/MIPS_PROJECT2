@@ -64,5 +64,8 @@ Loop: #Exit loop if value of counter is 4 and  counter++;
 				
 	slti $t2, $t0, 58       	  		#Valid digit check
 	li $t3, 47
-	slt $t3, $t3, $t0                      	
+	slt $t3, $t3, $t0 
+	and $t3, $t3, $t2  			
+	addi $t9, $t0, -48			
+	beq $t3, 1, convert	                    	
 
