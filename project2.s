@@ -86,5 +86,10 @@ Loop: #Exit loop if value of counter is 4 and  counter++;
 convert:
 	move $a0, $t9
 	move $a2, $t4
-	jal converter               	
+	jal converter 
+	add $s5, $s5, $v0
+	mul $t4, $t4, 28
+	j Loop
+	converter:
+		mul $v0, $a0, $a2              	
 
