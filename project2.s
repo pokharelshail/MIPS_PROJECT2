@@ -95,6 +95,12 @@ convert:
 		jr $ra              	
 
 
-Space:			    #sees if the space is in between or at start and end
+Space:			    #check if the space is in between or at start and end
 	beq $a3, 1, invalidError		
-	j Loop		
+	j Loop	
+
+print:  #print sum of all conveted values
+	li $v0, 1			
+	add $a0, $zero, $s5 
+	syscall
+	j exit	
