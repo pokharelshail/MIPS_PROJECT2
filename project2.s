@@ -108,3 +108,7 @@ print:  #print sum of all conveted values
 invalidError:			
 	li $v0, 4	
 	la $a0, invalid
+
+exit:
+	li $v0, 10			
+	syscall
