@@ -30,7 +30,10 @@ Start:
 	la $s6, four				#loading the adress of Four to s6 
 	
 	lb $a0, -1($a1)  
-	sb $a0, 0($s6)                          
+	sb $a0, 0($s6)   
+
+	lb $a0, 0($a1) 			
+	sb $a0, 1($s6)                       
 
 
 
